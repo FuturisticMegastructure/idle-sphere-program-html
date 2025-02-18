@@ -1,0 +1,70 @@
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: darkolivegreen;
+    user-select: none;
+}
+
+.main  {
+    display: flex;
+    gap: 200px;
+}
+
+.left h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.resources-image {
+    width: 300px;
+}
+
+.resources-image:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.resources-image:active{
+    opacity: 60;
+    transform: scale(1.1);
+}
+
+.upgrade{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 330px;
+    height: 60px;
+    border: 4px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.upgrade-img{
+    width: 50px;
+}
+
+.resource-img{
+    width: 30px;
+    height: 20px;
+}
+
+.cost-info{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mid-upgrade h4{
+    margin: 0;
+    margin-bottom: 10;
+    font-size: 30px;
+}
+
+.mid-upgrade p{
+    margin: 0;
+}

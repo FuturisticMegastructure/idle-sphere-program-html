@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idle Sphere Program</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="main">
+            <div class="left">
+                <h3>Resources: <span class="resources-count">0</span></h3>
+                <img src="./assets/resources.png" alt="resources" srcset="" class="resources-image" onclick="incrementResources()" draggable="false">
+            </div>
+            <div class="right">
+                <div class="upgrade" onclick="buyWorker()">
+                    <div class="left-upgrade">
+                        <img src="./assets/worker-icon-upgrade.png" alt="" class="upgrade-img">
+                    </div>
+                    <div class="mid-upgrade">
+                        <h4>Worker</h4>
+                        <div class="cost-info">
+                            <p>Cost: <span class="worker-cost">10</span> </p>
+                            <img src="./assets/resources.png" alt="" srcset="" class="resource-img">
+                        </div>
+                    </div>
+                    <div class="right-upgrade">
+                        0 workers
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>
