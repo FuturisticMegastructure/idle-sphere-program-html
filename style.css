@@ -6,6 +6,7 @@ body{
     padding: 0;
     background-color: darkolivegreen;
     user-select: none;
+    position: relative;
 }
 
 .main  {
@@ -98,4 +99,9 @@ body{
 
 .upgrade:hover  .level-info{
     display: block;
+}
+
+.statistics {
+    position: absolute;
+    bottom: 0;
 }

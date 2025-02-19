@@ -7,6 +7,10 @@ let resourcesPerSecond = 0
 let sciencePerClick = 1
 let sciencePerSecond = 0
 
+let rps = document.getElementById("resources-per-second-text")
+let sps = document.getElementById("science-per-second-text")
+let randspc = document.getElementById("rands-per-clic-text")
+
 let willpowerResourcesCost = document.querySelector('.willpower-resources-cost')
 let parsedWillpowerResourcesCost = parseFloat(willpowerResourcesCost.innerHTML)
 let willpowerScienceCost = document.querySelector('.willpower-science-cost')
@@ -86,4 +90,7 @@ setInterval(() =>{
     resources.innerHTML = Math.round(parsedResources)
     parsedScience += sciencePerSecond / 10
     science.innerHTML = Math.round(parsedScience)
+    rps.innerHTML = Math.round(resourcesPerSecond)
+    sps.innerHTML = Math.round(sciencePerSecond)
+    randspc.innerHTML = Math.round(resourcesPerClick)
 },100)
