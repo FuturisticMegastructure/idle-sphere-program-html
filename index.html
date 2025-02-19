@@ -10,10 +10,37 @@
     <section>
         <div class="main">
             <div class="left">
-                <h3>Resources: <span class="resources-count">0</span></h3>
+                <h3>Resources: <span class="resources-count">1000</span></h3>
                 <img src="./assets/resources.png" alt="resources" srcset="" class="resources-image" onclick="incrementResources()" draggable="false">
+                <h3>Science: <span class="science-count">1000</span></h3>
+                <img src="./assets/science.png" alt="resources" srcset="" class="science-image" onclick="incrementScience()" draggable="false">
             </div>
             <div class="right">
+
+                <div class="upgrade" onclick="buyWillpower()">
+                    <div class="left-upgrade">
+                        <img src="./assets/hand.png" alt="" class="upgrade-img">
+                    </div>
+                    <div class="mid-upgrade">
+                        <h4>WillPower</h4>
+                        <div class="cost-info">
+                            <p>Cost: <span class="willpower-resources-cost">10</span> </p>
+                            <img src="./assets/resources.png" alt="" srcset="" class="resource-img">
+                            <p><span class="willpower-science-cost">10</span> </p>
+                            <img src="./assets/science.png" alt="" srcset="" class="resource-img">
+                        </div>
+                    </div>
+                    <div class="right-upgrade">
+                        <span class="willpower-count">0</span> willpower
+                    </div>
+                    <div class="level-info">
+                        <p>
+                            +<span class="willpower-increase">1</span> resources and science/c
+                        </p>
+                        
+                    </div>
+                </div>
+
                 <div class="upgrade" onclick="buyWorker()">
                     <div class="left-upgrade">
                         <img src="./assets/worker-icon-upgrade.png" alt="" class="upgrade-img">
@@ -26,10 +53,38 @@
                         </div>
                     </div>
                     <div class="right-upgrade">
-                        0 workers
+                        <span class="worker-count">0</span> workers
+                    </div>
+                    <div class="level-info">
+                        <p>
+                            +<span class="worker-increase">0</span> resources/s
+                        </p>
                     </div>
                 </div>
+
+                <div class="upgrade" onclick="buyResearcher()">
+                    <div class="left-upgrade">
+                        <img src="./assets/researcher.png" alt="" class="upgrade-img">
+                    </div>
+                    <div class="mid-upgrade">
+                        <h4>Researcher</h4>
+                        <div class="cost-info">
+                            <p>Cost: <span class="researcher-cost">10</span> </p>
+                            <img src="./assets/science.png" alt="" srcset="" class="resource-img">
+                        </div>
+                    </div>
+                    <div class="right-upgrade">
+                        <span class="researcher-count">0</span> Researchers
+                    </div>
+                    <div class="level-info">
+                        <p>
+                            +<span class="researcher-increase">0</span> science/s
+                        </p>
+                    </div>
+                </div>
+
             </div>
+            
         </div>
     </section>
 
