@@ -34,12 +34,45 @@ let parsedResearcherCount = parseFloat(researcherCount.innerHTML)
 let researcherIncrease = document.querySelector(".researcher-increase")
 let parsedResearcherIncrease = parseFloat(researcherIncrease.innerHTML)
 
-function incrementResources(){
+let resourceImageContainer = document.querySelector(".resource-image-container")
+let scienceImageContainer = document.querySelector(".science-image-container")
+
+function incrementResources(event){
     resources.innerHTML = Math.round(parsedResources += (resourcesPerClick))
+
+    const x = event.offsetX
+    const y = event.offsetY
+
+    const div = document.createElement("div")
+    div.innerHTML = `+${Math.round(resourcesPerClick)}`
+    div.style.cssText = `color: white; position: absolute; top: ${y}px; left: ${x}px; font-size: 15px; pointer-events: none;`
+    resourceImageContainer.appendChild(div)
+
+    div.classList.add("fade-up")
+
+    timeout(div)
 }
 
-function incrementScience(){
+const timeout = (div) => {
+    setTimeout(() =>{
+        div.remove()
+    },900)
+}
+
+function incrementScience(event){
     science.innerHTML = Math.round(parsedScience += (sciencePerClick))
+
+    const x = event.offsetX
+    const y = event.offsetY
+
+    const div = document.createElement("div")
+    div.innerHTML = `+${Math.round(sciencePerClick)}`
+    div.style.cssText = `color: white; position: absolute; top: ${y}px; left: ${x}px; font-size: 15px; pointer-events: none;`
+    scienceImageContainer.appendChild(div)
+
+    div.classList.add("fade-up")
+
+    timeout(div)
 }
 
 function buyWillpower(){
@@ -94,3 +127,5 @@ setInterval(() =>{
     sps.innerHTML = Math.round(sciencePerSecond)
     randspc.innerHTML = Math.round(resourcesPerClick)
 },100)
+
+
